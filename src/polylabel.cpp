@@ -5,7 +5,7 @@
 // [[Rcpp::export]]
 Rcpp::NumericVector
 polyCentroid(const Rcpp::NumericMatrix points, const double precision = 1.0) {
-  auto n = points.size();
+  auto n = points.nrow();
 
   mapbox::geometry::polygon<double> poly;
 
