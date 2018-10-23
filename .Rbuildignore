@@ -1,2 +1,7 @@
+^LICENSE\.md$
+^codecov\.yml$
+^appveyor\.yml$
+^\.travis\.yml$
+^README\.Rmd$
 ^polylabelr\.Rproj$
 ^\.Rproj\.user$

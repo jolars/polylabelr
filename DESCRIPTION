@@ -2,13 +2,23 @@ Package: polylabelr
 Title: Efficiently Locate the Center of a Polygon for Labeling 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Johan",
-           family = "Larsson",
-           role = c("aut", "cre"),
-           email = "mail@larssonjohan.com")
+    c(person(given = "Johan",
+             family = "Larsson",
+             role = c("aut", "cre"),
+             email = "mail@larssonjohan.com"),
+      person("Mapbox", role = "cph", comment = "mapbox libraries, including polylabel"))
 Description: What the package does (one paragraph).
-License: What license it uses
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/jolars/polylabelr
 BugReports: https://github.com/jolars/polylabelr/issues
+LinkingTo: 
+    Rcpp
+Imports: 
+    Rcpp
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.0
+Suggests: 
+    covr,
+    testthat
