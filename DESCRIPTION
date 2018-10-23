@@ -1,5 +1,5 @@
 Package: polylabelr
-Title: What the Package Does (One Line, Title Case)
+Title: Efficiently Locate the Center of a Polygon for Labeling 
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Johan",
@@ -10,3 +10,5 @@ Description: What the package does (one paragraph).
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/jolars/polylabelr
+BugReports: https://github.com/jolars/polylabelr/issues
