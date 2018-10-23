@@ -21,7 +21,7 @@ Useful links:
 
 Other contributors:
 \itemize{
-  \item Mapbox (polylabel) [copyright holder]
+  \item Mapbox (mapbox libraries, including polylabel) [copyright holder]
 }
 
 }
