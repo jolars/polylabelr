@@ -46,7 +46,7 @@ T getSegDistSq(const geometry::point<T>& p,
 
 // signed distance from point to polygon outline (negative if point is outside)
 template <class T>
-auto pointToPolygonDist(const geometry::point<T>& point, const geometry::polygon<T>& polygon) {
+double pointToPolygonDist(const geometry::point<T>& point, const geometry::polygon<T>& polygon) {
     bool inside = false;
     auto minDistSq = std::numeric_limits<double>::infinity();
 

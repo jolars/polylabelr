@@ -19,7 +19,7 @@ auto for_each_point(Container&& container, F&& f)
 template <typename...Types, typename F>
 void for_each_point(mapbox::util::variant<Types...> const& geom, F&& f)
 {
-    mapbox::util::variant<Types...>::visit(geom, [&] (auto const& g) {
+    mapbox::util::variant<Types...>::visit(geom, [&] (double const& g) {
         for_each_point(g, f);
     });
 }
@@ -27,7 +27,7 @@ void for_each_point(mapbox::util::variant<Types...> const& geom, F&& f)
 template <typename...Types, typename F>
 void for_each_point(mapbox::util::variant<Types...> & geom, F&& f)
 {
-    mapbox::util::variant<Types...>::visit(geom, [&] (auto & g) {
+    mapbox::util::variant<Types...>::visit(geom, [&] (double & g) {
         for_each_point(g, f);
     });
 }
