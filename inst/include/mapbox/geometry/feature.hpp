@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include <experimental/optional>
+//#include <experimental/optional>
 
 namespace mapbox {
 namespace geometry {
