@@ -12,7 +12,7 @@ Description: A wrapper around the C++ library
   finding the approximate pole of inaccessibility of a polygon, which
   usually serves as an excellent candidate for labeling the polygon.
 License: MIT + file LICENSE
-Copyrights: see file COPYRIGHTS
+Copyright: see file inst/COPYRIGHTS
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/jolars/polylabelr
