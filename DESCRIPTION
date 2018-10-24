@@ -1,14 +1,18 @@
 Package: polylabelr
-Title: Efficiently Locate the Center of a Polygon for Labeling 
+Title: Establish the Pole of Inaccessibility (Visual Center) of a Polygon
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Johan",
              family = "Larsson",
              role = c("aut", "cre"),
              email = "mail@larssonjohan.com"),
-      person("Mapbox", role = "cph", comment = "mapbox libraries, including polylabel"))
-Description: What the package does (one paragraph).
+      person("Mapbox", role = "cph", comment = "variant, mapbox, and geometry libraries"))
+Description: A wrapper around the C++ library 
+  'polylabel' from 'Mapbox', providing an efficient routine for
+  finding the approximate pole of inaccessibility of a polygon, which
+  usually serves as an excellent candidate for labeling the polygon.
 License: MIT + file LICENSE
+Copyrights: see file COPYRIGHTS
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/jolars/polylabelr
@@ -21,4 +25,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.0
 Suggests: 
     covr,
-    testthat
+    testthat,
+    spelling
+Language: en-US
