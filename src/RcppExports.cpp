@@ -5,21 +5,21 @@
 
 using namespace Rcpp;
 
-// polyCentroid
-Rcpp::NumericVector polyCentroid(const Rcpp::NumericMatrix points, const double precision);
-RcppExport SEXP _polylabelr_polyCentroid(SEXP pointsSEXP, SEXP precisionSEXP) {
+// poi_cpp
+Rcpp::NumericVector poi_cpp(const Rcpp::List poly_list, const double precision);
+RcppExport SEXP _polylabelr_poi_cpp(SEXP poly_listSEXP, SEXP precisionSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< const Rcpp::NumericMatrix >::type points(pointsSEXP);
+    Rcpp::traits::input_parameter< const Rcpp::List >::type poly_list(poly_listSEXP);
     Rcpp::traits::input_parameter< const double >::type precision(precisionSEXP);
-    rcpp_result_gen = Rcpp::wrap(polyCentroid(points, precision));
+    rcpp_result_gen = Rcpp::wrap(poi_cpp(poly_list, precision));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_polylabelr_polyCentroid", (DL_FUNC) &_polylabelr_polyCentroid, 2},
+    {"_polylabelr_poi_cpp", (DL_FUNC) &_polylabelr_poi_cpp, 2},
     {NULL, NULL, 0}
 };
 
