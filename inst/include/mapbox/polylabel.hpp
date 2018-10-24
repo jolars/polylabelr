@@ -102,7 +102,7 @@ Cell<T> getCentroidCell(const geometry::polygon<T>& polygon) {
 } // namespace detail
 
 template <class T>
-geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 1, bool debug = false) {
+std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& polygon, T precision = 1, bool debug = false) {
     using namespace detail;
 
     // find the bounding box of the outer ring
@@ -124,7 +124,7 @@ geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 
     Queue cellQueue(compareMax);
 
     if (cellSize == 0) {
-        return envelope.min;
+        return std::make_tuple(envelope.min, 0.0);
     }
 
     // cover polygon with initial cells
@@ -152,7 +152,7 @@ geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 
         // update the best cell if we found a better one
         if (cell.d > bestCell.d) {
             bestCell = cell;
-            //if (debug) std::cout << "found best " << ::round(1e4 * cell.d) / 1e4 << " after " << numProbes << " probes" << std::endl;
+            // if (debug) std::cout << "found best " << ::round(1e4 * cell.d) / 1e4 << " after " << numProbes << " probes" << std::endl;
         }
 
         // do not drill down further if there's no chance of a better solution
@@ -167,12 +167,12 @@ geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 
         numProbes += 4;
     }
 
-    if (debug) {
-        //std::cout << "num probes: " << numProbes << std::endl;
-        //std::cout << "best distance: " << bestCell.d << std::endl;
-    }
+    // if (debug) {
+    //     std::cout << "num probes: " << numProbes << std::endl;
+    //     std::cout << "best distance: " << bestCell.d << std::endl;
+    // }
 
-    return bestCell.c;
+    return std::make_tuple(bestCell.c, bestCell.d);
 }
 
 } // namespace mapbox
