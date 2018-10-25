@@ -4,12 +4,12 @@
 \name{polylabelr-package}
 \alias{polylabelr}
 \alias{polylabelr-package}
-\title{polylabelr: Establish the Pole of Inaccessibility (Visual Center) of a Polygon}
+\title{polylabelr: Find the Pole of Inaccessibility (Visual Center) of a Polygon}
 \description{
 A wrapper around the C++ library 
-  'polylabel' from 'Mapbox', providing an efficient routine for
-  finding the approximate pole of inaccessibility of a polygon, which
-  usually serves as an excellent candidate for labeling the polygon.
+    'polylabel' from 'Mapbox', providing an efficient routine for
+    finding the approximate pole of inaccessibility of a polygon, which
+    usually serves as an excellent candidate for labeling the polygon.
 }
 \seealso{
 Useful links:
