@@ -1,0 +1,20 @@
+i     <- regexpr("(?<=\\s{1})\\d{4}(?=-{1})", meta$Built, perl = TRUE)
+year  <- substring(meta$Built, i, i + 3)
+vers  <- meta$Version
+pkg   <- meta$Package
+title <- meta$Title
+
+if(is.null(vers))
+  vers <- packageVersion(pkg)
+note <- paste("R package version", vers)
+
+citHeader(paste("To cite", pkg, "in publications, please use:"))
+
+bibentry(
+  bibtype      = "Manual",
+  title        = paste0("{", pkg, "}: ", tolower(title)),
+  author       = personList(as.person("Johan Larsson")),
+  year         = year,
+  note         = note,
+  url          = "https://github.com/jolars/polylabelr"
+)
