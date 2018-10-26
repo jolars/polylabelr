@@ -14,14 +14,10 @@
 #' @param y a vector of y coordinates. Only needs to be provided if
 #'   `x` is vector.
 #' @param precision the precision to use when computing the center
-#' @param ... arguments passed down to [grDevices::xy.coords()]
 #'
-#' @return An augmented version of the output of [grDevices::xy.coords()],
-#'   namely a list with items
+#' @return A list with items
 #'   \item{`x`}{x coordinate of the center}
 #'   \item{`y`}{y coordinate of the center}
-#'   \item{`xlab`}{label for the x coordinate}
-#'   \item{`ylab`}{label for the y coordinate}
 #'   \item{`dist`}{distance to the enclosing polygon}
 #'
 #' @source Garcia-Castellanos & Lombardo, 2007. Poles of inaccessibility: A
@@ -50,8 +46,8 @@
 #'
 #' points(poi(x, y))
 #'
-poi <- function(x, y = NULL, precision = 1.0, ...) {
-  xy <- grDevices::xy.coords(x, y, ...)
+poi <- function(x, y = NULL, precision = 1.0) {
+  xy <- grDevices::xy.coords(x, y)
 
   stopifnot(is.numeric(precision),
             length(precision) == 1)
@@ -73,7 +69,5 @@ poi <- function(x, y = NULL, precision = 1.0, ...) {
 
   center <- poi_cpp(polys, precision)
 
-  out <- grDevices::xy.coords(center[1], center[2], ...)
-  out$dist <- center[3]
-  out
+  list(x = center[1], y = center[1], dist = center[3])
 }

@@ -14,7 +14,7 @@ Geographical Journal, Volume 123, 3, 227-233.
 \url{https://blog.mapbox.com/a-new-algorithm-for-finding-a-visual-center-of-a-polygon-7c77e6492fbc}
 }
 \usage{
-poi(x, y = NULL, precision = 1, ...)
+poi(x, y = NULL, precision = 1)
 }
 \arguments{
 \item{x}{a vector of x coordinates or a matrix or data.frame
@@ -25,16 +25,11 @@ a time series (see \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}} for
 \code{x} is vector.}
 
 \item{precision}{the precision to use when computing the center}
-
-\item{...}{arguments passed down to \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}}}
 }
 \value{
-An augmented version of the output of \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}},
-namely a list with items
+A list with items
 \item{\code{x}}{x coordinate of the center}
 \item{\code{y}}{y coordinate of the center}
-\item{\code{xlab}}{label for the x coordinate}
-\item{\code{ylab}}{label for the y coordinate}
 \item{\code{dist}}{distance to the enclosing polygon}
 }
 \description{
