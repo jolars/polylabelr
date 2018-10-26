@@ -9,7 +9,7 @@
 A wrapper around the C++ library 
     'polylabel' from 'Mapbox', providing an efficient routine for
     finding the approximate pole of inaccessibility of a polygon, which
-    usually serves as an excellent candidate for labeling the polygon.
+    usually serves as an excellent candidate for labeling of a polygon.
 }
 \seealso{
 Useful links:
