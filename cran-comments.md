@@ -5,6 +5,7 @@
 * Debian Linux, R-devel, GCC ASAN/UBSAN on rhub
 * Fedora Linux, R-devel, clang, gfortran on rhub
 * macOS 10.11 El Capitan, R-release on rhub
+* winbuilder oldrel, release, devel (r75499) 
 
 ## R CMD check results
 
