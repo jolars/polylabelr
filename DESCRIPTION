@@ -6,7 +6,7 @@ Authors@R:
              family = "Larsson",
              role = c("aut", "cre"),
              email = "mail@larssonjohan.com"),
-      person("Mapbox", role = "cph", comment = "variant, mapbox, and geometry libraries"))
+      person("Mapbox", role = "cph", comment = "polylabel, variant, and geometry libraries"))
 Description: A wrapper around the C++ library 
     'polylabel' from 'Mapbox', providing an efficient routine for
     finding the approximate pole of inaccessibility of a polygon, which
