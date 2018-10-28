@@ -69,5 +69,5 @@ poi <- function(x, y = NULL, precision = 1.0) {
 
   center <- poi_cpp(polys, precision)
 
-  list(x = center[1], y = center[1], dist = center[3])
+  list(x = center[1], y = center[2], dist = center[3])
 }
