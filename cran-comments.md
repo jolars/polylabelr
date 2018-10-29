@@ -5,10 +5,15 @@
 * Debian Linux, R-devel, GCC ASAN/UBSAN on rhub
 * Fedora Linux, R-devel, clang, gfortran on rhub
 * macOS 10.11 El Capitan, R-release on rhub
-* winbuilder oldrel, release, devel (r75499) 
+* winbuilder oldrel, release, devel (r75506) 
 
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
 * This is a new release.
+
+## Resubmission
+
+This is a resubmission. The previous submission was archived
+on request by me because of an error in the package.
