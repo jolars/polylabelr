@@ -1,3 +1,3 @@
-# polylabelr 0.0.1
+# polylabelr 0.1.0
 
 * First release.
