@@ -20,11 +20,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Johan Larsson \email{mail@larssonjohan.com}
+\strong{Maintainer}: Johan Larsson \email{mail@larssonjohan.com} (0000-0002-4029-5945)
 
 Other contributors:
 \itemize{
-  \item Mapbox (variant, mapbox, and geometry libraries) [copyright holder]
+  \item Mapbox (polylabel, variant, and geometry libraries) [copyright holder]
 }
 
 }
