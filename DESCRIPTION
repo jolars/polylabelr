@@ -16,7 +16,7 @@ License: MIT + file LICENSE
 Copyright: see file COPYRIGHTS
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/jolars/polylabelr
+URL: https://github.com/jolars/polylabelr, https://jolars.github.io/polylabelr
 BugReports: https://github.com/jolars/polylabelr/issues
 Depends:
     R (>= 3.3.0)
