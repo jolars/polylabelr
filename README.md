@@ -59,3 +59,7 @@ modified in a few ways to compile properly with c++11 using the standard
 flags required by CRAN policies. polylabel has also been modified to
 return the distance from the chosen point to the enclosing polygon, in
 case it is of value to users.
+
+## Versioning
+
+**polylabelr** uses [semantic versioning](https://semver.org/).
