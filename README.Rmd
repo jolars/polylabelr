@@ -43,10 +43,16 @@ points(p)
 
 ## Installation
 
+### CRAN version
+
+```{r, eval = FALSE}
+install.packages("eulerr")
+```
+
 ### Development version
 
 ```{r, eval = FALSE}
-devtools::install_github("jolars/polylabelr")
+remotes::install_github("jolars/polylabelr")
 ```
 
 ## Modifications
