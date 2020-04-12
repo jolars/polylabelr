@@ -47,6 +47,11 @@
 #' points(poi(x, y))
 #'
 poi <- function(x, y = NULL, precision = 1.0) {
+  UseMethod('poi')
+}
+
+#' @export
+poi.default <- function(x, y = NULL, precision = 1.0) {
   xy <- grDevices::xy.coords(x, y)
 
   stopifnot(is.numeric(precision),

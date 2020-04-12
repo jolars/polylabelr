@@ -15,12 +15,13 @@ A wrapper around the C++ library
 Useful links:
 \itemize{
   \item \url{https://github.com/jolars/polylabelr}
+  \item \url{https://jolars.github.io/polylabelr}
   \item Report bugs at \url{https://github.com/jolars/polylabelr/issues}
 }
 
 }
 \author{
-\strong{Maintainer}: Johan Larsson \email{mail@larssonjohan.com} (0000-0002-4029-5945)
+\strong{Maintainer}: Johan Larsson \email{mail@larssonjohan.com} (\href{https://orcid.org/0000-0002-4029-5945}{ORCID})
 
 Other contributors:
 \itemize{
