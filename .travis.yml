@@ -4,10 +4,9 @@ language: R
 sudo: false
 cache: packages
 
-addons:
-  apt:
-    packages:
-      - libudunits2-dev
+r_binary_packages:
+  units
+  sf
 
 after_success:
   - Rscript -e 'covr::codecov()'
