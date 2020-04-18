@@ -25,6 +25,7 @@ Useful links:
 
 Other contributors:
 \itemize{
+  \item Kent Johnson \email{kent@kentsjohnson.com} [contributor]
   \item Mapbox (polylabel, variant, and geometry libraries) [copyright holder]
 }
 

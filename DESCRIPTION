@@ -7,6 +7,10 @@ Authors@R:
              role = c("aut", "cre"),
              email = "mail@larssonjohan.com",
              comment = c(ORCID = "0000-0002-4029-5945")),
+      person(given = "Kent",
+             family = "Johnson",
+             role = "ctb",
+             email = "kent@kentsjohnson.com"),
       person("Mapbox", role = "cph", comment = "polylabel, variant, and geometry libraries"))
 Description: A wrapper around the C++ library 
     'polylabel' from 'Mapbox', providing an efficient routine for
