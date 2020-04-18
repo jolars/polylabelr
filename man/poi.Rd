@@ -18,8 +18,9 @@ poi(x, y = NULL, precision = 1)
 }
 \arguments{
 \item{x}{a vector of x coordinates or a matrix or data.frame
-of x and y coordinates, a list of components x and y, or
-a time series (see \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}} for details)}
+of x and y coordinates, a list of components x and y,
+a time series (see \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}} for details),
+or a simple features object from package \code{sf}.}
 
 \item{y}{a vector of y coordinates. Only needs to be provided if
 \code{x} is vector.}
@@ -56,6 +57,14 @@ plot_path(x, y, col = "grey", border = NA)
 
 points(poi(x, y))
 
+\dontrun{
+# Find visual centers for North Carolina counties
+library(sf)
+nc <- st_read(system.file("shape/nc.shp", package="sf"))
+locations = do.call(rbind, poi(nc, precision=0.01))
+plot(st_geometry(nc))
+points(locations)
+}
 }
 \seealso{
 \code{\link[grDevices:xy.coords]{grDevices::xy.coords()}}, \code{\link[graphics:polypath]{graphics::polypath()}}
