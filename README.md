@@ -8,7 +8,7 @@
 [![R build
 status](https://github.com/jolars/polylabelr/workflows/R-CMD-check/badge.svg)](https://github.com/jolars/polylabelr/actions)
 [![Travis build
-status](https://travis-ci.org/jolars/polylabelr.svg?branch=master)](https://travis-ci.org/jolars/polylabelr)
+status](https://travis-ci.com/jolars/polylabelr.svg?branch=master)](https://travis-ci.com/jolars/polylabelr)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/jolars/polylabelr?branch=master&svg=true)](https://ci.appveyor.com/project/jolars/polylabelr)
 [![Coverage
