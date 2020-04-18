@@ -4,14 +4,9 @@ language: R
 sudo: false
 cache: packages
 
-r_binary_packages:
-  - units
-  - sf
 
-addons:
-  apt:
-    packages:
-      - libudunits2-dev
-
+      - libgdal-dev
+      - libgeos-dev
+      - libproj-dev
 after_success:
   - Rscript -e 'covr::codecov()'

@@ -1,4 +1,3 @@
-context("Simple features support")
 
 test_that("poi works with simple features", {
   skip_if_not_installed('sf')

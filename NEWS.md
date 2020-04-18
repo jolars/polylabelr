@@ -2,7 +2,7 @@
 
 ## New features
 
-* `poi()` supports simple features objects from the `sf` package (#2).
+* `poi()` supports simple features objects from the `sf` package (#2, thanks @kent37).
 
 ## Bug fixes
 
