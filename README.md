@@ -3,6 +3,10 @@
 
 # polylabelr
 
+<!-- badges: start -->
+
+[![R build
+status](https://github.com/jolars/polylabelr/workflows/R-CMD-check/badge.svg)](https://github.com/jolars/polylabelr/actions)
 [![Travis build
 status](https://travis-ci.org/jolars/polylabelr.svg?branch=master)](https://travis-ci.org/jolars/polylabelr)
 [![AppVeyor build
@@ -11,6 +15,8 @@ status](https://ci.appveyor.com/api/projects/status/github/jolars/polylabelr?bra
 status](https://codecov.io/gh/jolars/polylabelr/branch/master/graph/badge.svg)](https://codecov.io/github/jolars/polylabelr?branch=master)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/polylabelr)](https://cran.r-project.org/package=polylabelr)
+
+<!-- badges: end -->
 
 **polylabelr** is an R wrapper for the [polylabel
 package](https://github.com/mapbox/polylabel) from
