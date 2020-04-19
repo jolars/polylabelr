@@ -20,7 +20,6 @@ knitr::opts_chunk$set(
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/jolars/polylabelr?branch=master&svg=true)](https://ci.appveyor.com/project/jolars/polylabelr)
 [![Coverage status](https://codecov.io/gh/jolars/polylabelr/branch/master/graph/badge.svg)](https://codecov.io/github/jolars/polylabelr?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/polylabelr)](https://cran.r-project.org/package=polylabelr)
-
 <!-- badges: end -->
 
 **polylabelr** is an R wrapper for the 
