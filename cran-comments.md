@@ -24,5 +24,5 @@ I have switched e-mail address.
 ## Reverse dependencies
 
 I have checked reverse dependencies using `revdepcheck::revdep_check()`
-against polylabelr two dependencies eulerr and HilbertCurve, which
-without issues.
+against polylabelrs two dependencies eulerr and HilbertCurve without
+issues.
