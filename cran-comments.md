@@ -9,17 +9,7 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Johan Larsson <johanlarsson@outlook.com>'
-
-New maintainer:
-  Johan Larsson <johanlarsson@outlook.com>
-Old maintainer(s):
-  Johan Larsson <mail@larssonjohan.com>
-  
-I have switched e-mail address.
+0 errors | 0 warnings | 0 note
 
 ## Reverse dependencies
 
