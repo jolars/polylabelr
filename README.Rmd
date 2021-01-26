@@ -49,7 +49,7 @@ points(p)
 ### CRAN version
 
 ```{r, eval = FALSE}
-install.packages("eulerr")
+install.packages("polylabelr")
 ```
 
 ### Development version
