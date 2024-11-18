@@ -46,7 +46,7 @@ T getSegDistSq(const geometry::point<T>& p,
 
 // signed distance from point to polygon outline (negative if point is outside)
 template <class T>
-double pointToPolygonDist(const geometry::point<T>& point, const geometry::polygon<T>& polygon) {
+auto pointToPolygonDist(const geometry::point<T>& point, const geometry::polygon<T>& polygon) {
     bool inside = false;
     auto minDistSq = std::numeric_limits<double>::infinity();
 
@@ -102,7 +102,7 @@ Cell<T> getCentroidCell(const geometry::polygon<T>& polygon) {
 } // namespace detail
 
 template <class T>
-std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& polygon, T precision = 1, bool debug = false) {
+geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 1, bool debug = false) {
     using namespace detail;
 
     // find the bounding box of the outer ring
@@ -124,7 +124,7 @@ std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& pol
     Queue cellQueue(compareMax);
 
     if (cellSize == 0) {
-        return std::make_tuple(envelope.min, 0.0);
+        return envelope.min;
     }
 
     // cover polygon with initial cells
@@ -137,7 +137,7 @@ std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& pol
     // take centroid as the first best guess
     auto bestCell = getCentroidCell(polygon);
 
-    // special case for rectangular polygons
+    // second guess: bounding box centroid
     Cell<T> bboxCell(envelope.min + size / 2.0, 0, polygon);
     if (bboxCell.d > bestCell.d) {
         bestCell = bboxCell;
@@ -152,7 +152,7 @@ std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& pol
         // update the best cell if we found a better one
         if (cell.d > bestCell.d) {
             bestCell = cell;
-            // if (debug) std::cout << "found best " << ::round(1e4 * cell.d) / 1e4 << " after " << numProbes << " probes" << std::endl;
+            if (debug) std::cout << "found best " << ::round(1e4 * cell.d) / 1e4 << " after " << numProbes << " probes" << std::endl;
         }
 
         // do not drill down further if there's no chance of a better solution
@@ -167,12 +167,12 @@ std::tuple<geometry::point<T>, double> polylabel(const geometry::polygon<T>& pol
         numProbes += 4;
     }
 
-    // if (debug) {
-    //     std::cout << "num probes: " << numProbes << std::endl;
-    //     std::cout << "best distance: " << bestCell.d << std::endl;
-    // }
+    if (debug) {
+        std::cout << "num probes: " << numProbes << std::endl;
+        std::cout << "best distance: " << bestCell.d << std::endl;
+    }
 
-    return std::make_tuple(bestCell.c, bestCell.d);
+    return bestCell.c;
 }
 
 } // namespace mapbox

@@ -24,12 +24,20 @@ poi_cpp(const Rcpp::List poly_list, const double precision = 1.0)
     poly.push_back(std::move(ring));
   }
 
-  mapbox::geometry::point<double> center;
-  double best_dist;
+  mapbox::geometry::point<double> center = mapbox::polylabel(poly, precision);
 
-  std::tie(center, best_dist) = mapbox::polylabel(poly, precision);
+  // Find distance to polygon
+  const mapbox::geometry::box<double> envelope =
+    mapbox::geometry::envelope(poly.at(0));
+  const mapbox::geometry::point<double> size{ envelope.max.x - envelope.min.x,
+                                              envelope.max.y - envelope.min.y };
+  const double cellSize = std::min(size.x, size.y);
 
-  Rcpp::NumericVector out{ center.x, center.y, best_dist };
-
-  return out;
+  if (cellSize == 0) {
+    return { envelope.min.x, envelope.min.y, 0.0 };
+  } else {
+    return { center.x,
+             center.y,
+             mapbox::detail::pointToPolygonDist(center, poly) };
+  }
 }
