@@ -21,8 +21,8 @@ point_in_polygon <- function(x, polygon) {
 
   for (i in seq_len(n)) {
     if (((polygon$y[i] >= point$y) != (polygon$y[j] >= point$y)) &&
-        (point$x <= (polygon$x[j] - polygon$x[i])*(point$y - polygon$y[i]) /
-         (polygon$y[j] - polygon$y[i]) + polygon$x[i])) {
+      (point$x <= (polygon$x[j] - polygon$x[i]) * (point$y - polygon$y[i]) /
+        (polygon$y[j] - polygon$y[i]) + polygon$x[i])) {
       inside <- !inside
     }
 
@@ -31,4 +31,3 @@ point_in_polygon <- function(x, polygon) {
 
   inside
 }
-
