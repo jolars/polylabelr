@@ -15,31 +15,31 @@ jobs:
       with:
         ref: main
 
-    - name: Checkout mapbox/variant
-      uses: actions/checkout@v4
-      with:
-        repository: mapbox/variant
-        path: mapbox_variant
+    - name: Get latest release info
+      id: get_release
+      run: |
+        latest_release=$(curl -s https://api.github.com/repos/mapbox/variant/releases/latest)
+        echo "tag_name=$(echo $latest_release | jq -r .tag_name)" >> $GITHUB_ENV
+        echo "tarball_url=$(echo $latest_release | jq -r .tarball_url)" >> $GITHUB_ENV
+
+    - name: Download release tarball
+      run: |
+        curl -L ${{ env.tarball_url }} -o release.tar.gz
+        mkdir tmp
+        tar -xzf release.tar.gz -C tmp --strip-components=1
 
     - name: Copy headers
       run: |
         mkdir -p inst/include
-        cp -r mapbox_variant/include/* inst/include/
-
-    - name: Commit and push changes
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-        git checkout -b update-variant-headers
-        git add inst/include/*
-        git commit -m "Update C++ headers from mapbox/variant"
-        git push origin update-variant-headers
+        cp -r tmp/include/* inst/include/
+        rm -rf tmp
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7
       with:
+        title: "Update C++ headers from mapbox/variant to release ${{ env.tag_name }}"
+        commit-message: "chore(deps): update mapbox/variant to ${{ env.tag_name }}"
         token: ${{ secrets.GITHUB_TOKEN }}
-        branch: update-variant-headers
-        title: "Update C++ headers from mapbox/variant"
-        body: "Automated update of C++ headers from mapbox/variant repository."
+        branch: update-variant-headers-${{ env.tag_name }}
+        body: "Automated update of C++ headers from mapbox/variant release ${{ env.tag_name }}."
         labels: "automated update"
