@@ -1,5 +1,3 @@
-context("poles of inaccessibility")
-
 test_that("correct pois are computed for a variety of polygons", {
   # square
   x <- rbind(c(0, 0), c(1, 0), c(1, 1), c(0, 1))
