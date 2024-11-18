@@ -5,16 +5,11 @@
 
 <!-- badges: start -->
 
-[![R build
-status](https://github.com/jolars/polylabelr/workflows/R-CMD-check/badge.svg)](https://github.com/jolars/polylabelr/actions)
-[![Travis build
-status](https://travis-ci.com/jolars/polylabelr.svg?branch=master)](https://travis-ci.com/jolars/polylabelr)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/jolars/polylabelr?branch=master&svg=true)](https://ci.appveyor.com/project/jolars/polylabelr)
-[![Coverage
-status](https://codecov.io/gh/jolars/polylabelr/branch/master/graph/badge.svg)](https://codecov.io/github/jolars/polylabelr?branch=master)
+[![R-CMD-check](https://github.com/jolars/polylabelr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jolars/polylabelr/actions/workflows/R-CMD-check.yaml)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/polylabelr)](https://cran.r-project.org/package=polylabelr)
+[![Coverage
+status](https://codecov.io/gh/jolars/polylabelr/branch/master/graph/badge.svg)](https://codecov.io/github/jolars/polylabelr?branch=master)
 <!-- badges: end -->
 
 **polylabelr** is an R wrapper for the [polylabel
@@ -47,7 +42,7 @@ points(p)
 ### CRAN version
 
 ``` r
-install.packages("eulerr")
+install.packages("polylabelr")
 ```
 
 ### Development version
