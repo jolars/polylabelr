@@ -14,7 +14,7 @@
 #' @inherit poi return
 #' @inheritDotParams poi
 #'
-#' @seealso [poi()] [poi.MULTIPOLYGON()]
+#' @seealso [poi()]
 #'
 #' @export
 #'

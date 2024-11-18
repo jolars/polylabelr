@@ -83,5 +83,5 @@ points(res, pch = 19, col = "steelblue4")
 res
 }
 \seealso{
-\code{\link[=poi]{poi()}} \code{\link[=poi.MULTIPOLYGON]{poi.MULTIPOLYGON()}}
+\code{\link[=poi]{poi()}}
 }
