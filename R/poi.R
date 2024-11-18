@@ -50,22 +50,25 @@
 #' \dontrun{
 #' # Find visual centers for North Carolina counties
 #' library(sf)
-#' nc <- st_read(system.file("shape/nc.shp", package="sf"))
-#' locations = do.call(rbind, poi(nc, precision=0.01))
+#' nc <- st_read(system.file("shape/nc.shp", package = "sf"))
+#' locations <- do.call(rbind, poi(nc, precision = 0.01))
 #' plot(st_geometry(nc))
 #' points(locations)
+#' }
 
 #' }
 poi <- function(x, y = NULL, precision = 1.0) {
-  UseMethod('poi')
+  UseMethod("poi")
 }
 
 #' @export
 poi.default <- function(x, y = NULL, precision = 1.0) {
   xy <- grDevices::xy.coords(x, y)
 
-  stopifnot(is.numeric(precision),
-            length(precision) == 1)
+  stopifnot(
+    is.numeric(precision),
+    length(precision) == 1
+  )
 
   ends <- c(which(is.na(xy$x) | is.na(xy$y)), length(xy$x) + 1)
   n <- length(ends)

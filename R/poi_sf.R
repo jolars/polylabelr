@@ -43,34 +43,38 @@ poi.POINT <- function(x, ...) {
 #' @export
 poi.MULTIPOINT <- function(x, ...) {
   # Just pick the first point
-  poi(as.matrix(x)[1, , drop=FALSE], ...)
+  poi(as.matrix(x)[1, , drop = FALSE], ...)
 }
 
 #' @export
 poi.LINESTRING <- function(x, ...) {
   # Just pick the first point
-  poi(as.matrix(x)[1, , drop=FALSE], ...)
+  poi(as.matrix(x)[1, , drop = FALSE], ...)
 }
 
 #' @export
 poi.MULTILINESTRING <- function(x, ...) {
   # Just pick the first point
-  poi(as.matrix(x[[1]])[1, , drop=FALSE], ...)
+  poi(as.matrix(x[[1]])[1, , drop = FALSE], ...)
 }
 
 
 # Unsupported geometries get a warning and NA
 #' @export
 poi.sfg <- function(x, ...) {
-  warning('poi() does not support objects of type ',
-          paste(class(x), collapse=", "), '.')
+  warning(
+    "poi() does not support objects of type ",
+    paste(class(x), collapse = ", "), "."
+  )
   NA
 }
 
 # Find the poi result with the largest $dist from a list of results
 # some of which may be NA
 which_max_dist <- function(pois) {
-  which.max(vapply(pois,
-                   function(x) ifelse(is.list(x), x$dist, NA_real_),
-                   double(1)))
+  which.max(vapply(
+    pois,
+    function(x) ifelse(is.list(x), x$dist, NA_real_),
+    double(1)
+  ))
 }
