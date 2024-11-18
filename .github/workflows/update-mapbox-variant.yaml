@@ -42,4 +42,4 @@ jobs:
         branch: update-variant-headers
         title: "Update C++ headers from mapbox/variant"
         body: "Automated update of C++ headers from mapbox/variant repository."
-        labels: ["automated update"]
+        labels: "automated update"

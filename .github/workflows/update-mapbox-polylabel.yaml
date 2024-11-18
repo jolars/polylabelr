@@ -42,4 +42,4 @@ jobs:
         branch: update-polylabel-headers
         title: "Update C++ headers from mapbox/polylabel"
         body: "Automated update of C++ headers from mapbox/polylabel repository."
-        labels: ["automated update"]
+        labels: "automated update"

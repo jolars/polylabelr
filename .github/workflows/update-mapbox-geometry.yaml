@@ -42,4 +42,4 @@ jobs:
         branch: update-geometry-headers
         title: "Update C++ headers from mapbox/geometry.hpp"
         body: "Automated update of C++ headers from mapbox/geometry.hpp repository."
-        labels: ["automated update"]
+        labels: "automated update"
