@@ -27,6 +27,7 @@ jobs:
         curl -L ${{ env.tarball_url }} -o release.tar.gz
         mkdir tmp
         tar -xzf release.tar.gz -C tmp --strip-components=1
+        rm release.tar.gz
 
     - name: Copy headers
       run: |
