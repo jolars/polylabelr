@@ -64,7 +64,8 @@ poi.MULTILINESTRING <- function(x, ...) {
 poi.sfg <- function(x, ...) {
   warning(
     "poi() does not support objects of type ",
-    paste(class(x), collapse = ", "), "."
+    paste(class(x), collapse = ", "),
+    "."
   )
   NA
 }
