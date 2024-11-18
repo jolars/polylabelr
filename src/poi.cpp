@@ -1,6 +1,6 @@
+#include <Rcpp.h>
 #include <mapbox/geometry.hpp>
 #include <mapbox/polylabel.hpp>
-#include <Rcpp.h>
 
 // [[Rcpp::export]]
 Rcpp::NumericVector
@@ -29,7 +29,7 @@ poi_cpp(const Rcpp::List poly_list, const double precision = 1.0)
 
   std::tie(center, best_dist) = mapbox::polylabel(poly, precision);
 
-  Rcpp::NumericVector out{center.x, center.y, best_dist};
+  Rcpp::NumericVector out{ center.x, center.y, best_dist };
 
   return out;
 }
