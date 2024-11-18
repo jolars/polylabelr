@@ -35,16 +35,7 @@ test_that("poi detection for multi-polygons", {
   )
   mpol <- list(p1, p2, p3)
 
-  plot.new()
-  plot.window(c(0, 4), c(0, 4), asp = 1)
-  for (i in seq_along(mpol)) {
-    polypath(mpol[[i]])
-  }
-
   res <- poi_multi(mpol, precision = 1e-3)
-  res
-
-  points(res, pch = 19, col = "steelblue4")
 
   expect_true(point_in_polygon(res, p1a))
   expect_false(point_in_polygon(res, p1b))
