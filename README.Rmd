@@ -58,12 +58,9 @@ remotes::install_github("jolars/polylabelr")
 
 ## Modifications
 
-The source code from [polylabel](https://github.com/mapbox/polylabel)
-and [geometry.hpp](https://github.com/mapbox/geometry.hpp/) has been
-modified in a few ways to compile properly with c++11 using the
-standard flags required by CRAN policies. polylabel has also
-been modified to return the distance from the chosen point to the
-enclosing polygon, in case it is of value to users.
+The source code from [geometry.hpp](https://github.com/mapbox/geometry.hpp/) 
+has been modified slightly by removing the use of some GCC diagnostic
+pragmas that caused warnings in R CMD check.
 
 
 ## Versioning
