@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         ref: main
 
     - name: Checkout mapbox/polylabel
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: mapbox/polylabel
         path: mapbox_polylabel
