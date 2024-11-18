@@ -21,7 +21,6 @@ Description: A wrapper around the C++ library 'polylabel' from 'Mapbox',
 License: MIT + file LICENSE
 Copyright: see file COPYRIGHTS
 Encoding: UTF-8
-LazyData: true
 URL: https://github.com/jolars/polylabelr, https://jolars.github.io/polylabelr
 BugReports: https://github.com/jolars/polylabelr/issues
 Depends:
