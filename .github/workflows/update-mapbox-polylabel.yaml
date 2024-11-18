@@ -29,6 +29,12 @@ jobs:
         tar -xzf release.tar.gz -C tmp --strip-components=1
         rm release.tar.gz
 
+    - name: Patch to strip GCC diagnostic pragmas
+      run: |
+        find tmp/include/mapbox -type f -name '*.hpp' -exec sed -i '/#pragma GCC diagnostic push/d' {} +
+        find tmp/include/mapbox -type f -name '*.hpp' -exec sed -i '/#pragma GCC diagnostic ignored "-Wfloat-equal"/d' {} +
+        find tmp/include/mapbox -type f -name '*.hpp' -exec sed -i '/#pragma GCC diagnostic pop/d' {} +
+
     - name: Copy headers
       run: |
         mkdir -p inst/include
