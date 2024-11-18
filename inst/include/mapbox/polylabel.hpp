@@ -152,7 +152,6 @@ geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 
         // update the best cell if we found a better one
         if (cell.d > bestCell.d) {
             bestCell = cell;
-            if (debug) std::cout << "found best " << ::round(1e4 * cell.d) / 1e4 << " after " << numProbes << " probes" << std::endl;
         }
 
         // do not drill down further if there's no chance of a better solution
@@ -165,11 +164,6 @@ geometry::point<T> polylabel(const geometry::polygon<T>& polygon, T precision = 
         cellQueue.push(Cell<T>({cell.c.x - h, cell.c.y + h}, h, polygon));
         cellQueue.push(Cell<T>({cell.c.x + h, cell.c.y + h}, h, polygon));
         numProbes += 4;
-    }
-
-    if (debug) {
-        std::cout << "num probes: " << numProbes << std::endl;
-        std::cout << "best distance: " << bestCell.d << std::endl;
     }
 
     return bestCell.c;
