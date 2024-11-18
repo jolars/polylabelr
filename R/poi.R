@@ -55,8 +55,6 @@
 #' plot(st_geometry(nc))
 #' points(locations)
 #' }
-
-#' }
 poi <- function(x, y = NULL, precision = 1.0) {
   UseMethod("poi")
 }
