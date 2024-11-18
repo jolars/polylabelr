@@ -1,0 +1,45 @@
+name: Update C++ Headers from mapbox/geometry.hpp
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Runs once a week on Sunday at midnight
+  workflow_dispatch:
+
+jobs:
+  update-headers:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: main
+
+    - name: Checkout mapbox/geometry.hpp
+      uses: actions/checkout@v3
+      with:
+        repository: mapbox/geometry.hpp
+        path: mapbox_geometry
+
+    - name: Copy headers
+      run: |
+        mkdir -p inst/include
+        cp -r mapbox_geometry/include/* inst/include/
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+        git checkout -b update-geometry-headers
+        git add inst/include/*
+        git commit -m "Update C++ headers from mapbox/geometry.hpp"
+        git push origin update-geometry-headers
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: update-geometry-headers
+        title: "Update C++ headers from mapbox/geometry.hpp"
+        body: "Automated update of C++ headers from mapbox/geometry.hpp repository."
+        labels: ["automated update"]
