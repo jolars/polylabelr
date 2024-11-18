@@ -46,6 +46,7 @@ jobs:
       uses: peter-evans/create-pull-request@v7
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        base: main
         branch: update-geometry-headers-${{ env.tag_name }}
         title: "Update C++ headers from mapbox/geometry.hpp release ${{ env.tag_name }}"
         body: "Automated update of C++ headers from mapbox/geometry.hpp release ${{ env.tag_name }}."
