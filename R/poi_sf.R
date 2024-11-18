@@ -58,7 +58,6 @@ poi.MULTILINESTRING <- function(x, ...) {
   poi(as.matrix(x[[1]])[1, , drop = FALSE], ...)
 }
 
-
 # Unsupported geometries get a warning and NA
 #' @export
 poi.sfg <- function(x, ...) {
