@@ -1,7 +1,7 @@
 Package: polylabelr
 Title: Find the Pole of Inaccessibility (Visual Center) of a Polygon
 Version: 0.2.0.9000
-Authors@R: 
+Authors@R:
     c(person(given = "Johan",
              family = "Larsson",
              role = c("aut", "cre"),
@@ -11,11 +11,11 @@ Authors@R:
              family = "Johnson",
              role = "ctb",
              email = "kent@kentsjohnson.com"),
-      person("Mapbox", 
-             role = "cph", 
+      person("Mapbox",
+             role = "cph",
              comment = "polylabel, variant, and geometry libraries"))
-Description: A wrapper around the C++ library 'polylabel' from 'Mapbox', 
-    providing an efficient routine for finding the approximate pole of 
+Description: A wrapper around the C++ library 'polylabel' from 'Mapbox',
+    providing an efficient routine for finding the approximate pole of
     inaccessibility of a polygon, which usually serves as an excellent candidate
     for labeling of a polygon.
 License: MIT + file LICENSE
@@ -26,13 +26,13 @@ URL: https://github.com/jolars/polylabelr, https://jolars.github.io/polylabelr
 BugReports: https://github.com/jolars/polylabelr/issues
 Depends:
     R (>= 3.3.0)
-LinkingTo: 
+LinkingTo:
     Rcpp
-Imports: 
+Imports:
     Rcpp
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Suggests: 
+Suggests:
     covr,
     testthat,
     spelling,
