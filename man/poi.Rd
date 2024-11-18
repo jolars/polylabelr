@@ -60,8 +60,8 @@ points(poi(x, y))
 \dontrun{
 # Find visual centers for North Carolina counties
 library(sf)
-nc <- st_read(system.file("shape/nc.shp", package="sf"))
-locations = do.call(rbind, poi(nc, precision=0.01))
+nc <- st_read(system.file("shape/nc.shp", package = "sf"))
+locations <- do.call(rbind, poi(nc, precision = 0.01))
 plot(st_geometry(nc))
 points(locations)
 }
