@@ -1,23 +1,24 @@
 # Platform
 
-|field    |value                        |
-|:--------|:----------------------------|
-|version  |R version 3.6.2 (2019-12-12) |
-|os       |Ubuntu 19.10                 |
-|system   |x86_64, linux-gnu            |
-|ui       |RStudio                      |
-|language |(EN)                         |
-|collate  |en_US.UTF-8                  |
-|ctype    |en_US.UTF-8                  |
-|tz       |Europe/Stockholm             |
-|date     |2020-04-18                   |
+|field    |value                                             |
+|:--------|:-------------------------------------------------|
+|version  |R version 4.4.1 (2024-06-14)                      |
+|os       |NixOS 25.05 (Warbler)                             |
+|system   |x86_64, linux-gnu                                 |
+|ui       |X11                                               |
+|language |(EN)                                              |
+|collate  |en_US.UTF-8                                       |
+|ctype    |en_US.UTF-8                                       |
+|tz       |Europe/Stockholm                                  |
+|date     |2024-11-19                                        |
+|pandoc   |3.1.11.1 @ /etc/profiles/per-user/jola/bin/pandoc |
 
 # Dependencies
 
-|package    |old     |new        |Δ  |
-|:----------|:-------|:----------|:--|
-|polylabelr |0.1.0   |0.1.0.9000 |*  |
-|Rcpp       |1.0.4.6 |1.0.4.6    |   |
+|package    |old   |new      |Δ  |
+|:----------|:-----|:--------|:--|
+|polylabelr |0.2.0 |0.3.0    |*  |
+|Rcpp       |NA    |1.0.13-1 |*  |
 
 # Revdeps
 
