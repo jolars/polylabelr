@@ -51,16 +51,16 @@ jobs:
         with:
           upload-snapshots: true
           build_args: 'c("--no-manual","--compact-vignettes=gs+qpdf")'
-
-  release:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    permissions:
-      contents: write
-      pull-requests: write
-    needs:
-      - R-CMD-check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: googleapis/release-please-action@v4
-        with:
-          token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
+  #
+  # release:
+  #   if: ${{ github.ref == 'refs/heads/main' }}
+  #   permissions:
+  #     contents: write
+  #     pull-requests: write
+  #   needs:
+  #     - R-CMD-check
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: googleapis/release-please-action@v4
+  #       with:
+  #         token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
