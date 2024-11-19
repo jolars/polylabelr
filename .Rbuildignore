@@ -12,3 +12,5 @@
 ^pkgdown$
 ^\.github$
 ^revdep$
+^release-please-config.json$
+^.release-please-manifest.json$
