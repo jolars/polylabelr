@@ -24,7 +24,7 @@
 #' @source Garcia-Castellanos & Lombardo, 2007. Poles of inaccessibility: A
 #'   calculation algorithm for the remotest places on earth Scottish
 #'   Geographical Journal, Volume 123, 3, 227-233.
-#'   <https://dx.doi.org/10.1080/14702540801897809>
+#'   \doi{10.1080/14702540801897809}
 #' @source <https://github.com/mapbox/polylabel>
 #' @source <https://blog.mapbox.com/a-new-algorithm-for-finding-a-visual-center-of-a-polygon-7c77e6492fbc>
 #'

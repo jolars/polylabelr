@@ -7,7 +7,7 @@
 Garcia-Castellanos & Lombardo, 2007. Poles of inaccessibility: A
 calculation algorithm for the remotest places on earth Scottish
 Geographical Journal, Volume 123, 3, 227-233.
-\url{https://dx.doi.org/10.1080/14702540801897809}
+\doi{10.1080/14702540801897809}
 
 \url{https://github.com/mapbox/polylabel}
 
