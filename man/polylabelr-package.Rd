@@ -12,7 +12,7 @@ A wrapper around the C++ library 'polylabel' from 'Mapbox', providing an efficie
 Useful links:
 \itemize{
   \item \url{https://github.com/jolars/polylabelr}
-  \item \url{https://jolars.github.io/polylabelr}
+  \item \url{https://jolars.github.io/polylabelr/}
   \item Report bugs at \url{https://github.com/jolars/polylabelr/issues}
 }
 
