@@ -1,0 +1,22 @@
+year <- sub("-.*", "", meta$Date)
+if(!length(year))
+  year <- substr(Sys.Date(), 1, 4)
+
+vers  <- meta$Version
+pkg   <- meta$Package
+title <- meta$Title
+
+if(is.null(vers))
+  vers <- packageVersion(pkg)
+note <- paste("R package version", vers)
+
+citHeader(paste("To cite", pkg, "in publications, please use:"))
+
+bibentry(
+  bibtype      = "Manual",
+  title        = paste0("{", pkg, "}: ", tolower(title)),
+  author       = personList(as.person("Johan Larsson")),
+  year         = year,
+  note         = note,
+  url          = "https://cran.r-project.org/package=polylabelr"
+)

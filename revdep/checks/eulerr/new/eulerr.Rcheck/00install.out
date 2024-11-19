@@ -1,0 +1,34 @@
+* installing *source* package ‘eulerr’ ...
+** package ‘eulerr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (GCC) 13.3.0’
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c RcppExports.cpp -o RcppExports.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c compute-areas.cpp -o compute-areas.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c conic.cpp -o conic.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c ellipse.cpp -o ellipse.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c helpers.cpp -o helpers.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c intersections.cpp -o intersections.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c loss.cpp -o loss.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c optim_final.cpp -o optim_final.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c optim_init.cpp -o optim_init.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c point.cpp -o point.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c solve_cubic.cpp -o solve_cubic.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -I"/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/include" -DNDEBUG  -I'/home/jola/projects/polylabelr/revdep/library/polylabelr/new/Rcpp/include' -I'/home/jola/projects/polylabelr/revdep/library/eulerr/RcppArmadillo/include'     -fpic  -g -O2   -c utils.cpp -o utils.o
+/nix/store/3ix5h74n7ar9950vwzp4dxmil70pmx0k-gcc-wrapper-13.3.0/bin/c++ -std=gnu++17 -shared -L/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/lib -o eulerr.so RcppExports.o compute-areas.o conic.o ellipse.o helpers.o intersections.o loss.o optim_final.o optim_init.o point.o solve_cubic.o utils.o -L/nix/store/9jmd2rzff70ljd0gfsjjzf86in36j757-lapack-3/lib -llapack -L/nix/store/p2a6x92n2gwljav85zz3hzid1nk7iq0l-blas-3/lib -lblas -L/nix/store/ay9awjgi5rbk62zrv2c2a0gl05v4fy6i-gfortran-13.3.0-lib/lib -L/nix/store/qvpf8z2l2r024mq52skx9z8nicxd8wbd-binutils-wrapper-2.43.1/bin -L/nix/store/7171wfrd4rbnaxgmpvcv6aw9kq8kh1vj-gfortran-13.3.0/lib/gcc/x86_64-unknown-linux-gnu/13.3.0 -L/nix/store/7171wfrd4rbnaxgmpvcv6aw9kq8kh1vj-gfortran-13.3.0/lib -lgfortran -lm -lquadmath -L/nix/store/n2bprq3k4hlkvkxbazgla3fy9f2dazrn-R-4.4.1/lib/R/lib -lR
+installing to /home/jola/projects/polylabelr/revdep/checks/eulerr/new/eulerr.Rcheck/00LOCK-eulerr/00new/eulerr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (eulerr)

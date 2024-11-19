@@ -1,0 +1,23 @@
+* using log directory ‘/home/jola/projects/polylabelr/revdep/checks/HilbertCurve/old/HilbertCurve.Rcheck’
+* using R version 4.4.1 (2024-06-14)
+* using platform: x86_64-pc-linux-gnu
+* R was compiled by
+    gcc (GCC) 13.3.0
+    GNU Fortran (GCC) 13.3.0
+* running under: NixOS 25.05 (Warbler)
+* using session charset: UTF-8
+* using options ‘--no-manual --no-build-vignettes’
+* checking for file ‘HilbertCurve/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘HilbertCurve’ version ‘1.32.0’
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Packages required but not available: 'circlize', 'IRanges', 'GenomicRanges'
+
+Packages suggested but not available for checking:
+  'ComplexHeatmap', 'GetoptLong'
+
+See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+manual.
+* DONE
+Status: 1 ERROR
