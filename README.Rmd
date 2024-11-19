@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/jolars/polylabelr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jolars/polylabelr/actions/workflows/R-CMD-check.yaml)
 [![CRAN status](https://www.r-pkg.org/badges/version/polylabelr)](https://cran.r-project.org/package=polylabelr)
-[![Coverage status](https://codecov.io/gh/jolars/polylabelr/branch/master/graph/badge.svg)](https://codecov.io/github/jolars/polylabelr?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/jolars/polylabelr/graph/badge.svg)](https://app.codecov.io/gh/jolars/polylabelr)
 <!-- badges: end -->
 
 **polylabelr** is an R wrapper for the 
