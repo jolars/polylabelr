@@ -15,7 +15,7 @@ citHeader(paste("To cite", pkg, "in publications, please use:"))
 bibentry(
   bibtype      = "Manual",
   title        = paste0("{", pkg, "}: ", tolower(title)),
-  author       = personList(as.person("Johan Larsson")),
+  author       = c(as.person("Johan Larsson")),
   year         = year,
   note         = note,
   url          = "https://cran.r-project.org/package=polylabelr"
