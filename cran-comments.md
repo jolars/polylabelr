@@ -1,18 +1,20 @@
 ## Test environments
-* local antergos linux installation, R 3.5.1, x64
-* Ubuntu Linux 16.04 LTS, R-release, GCC on rhub
-* Windows Server 2008 R2 SP1, R-devel, 32/64 bit on rhub
-* Debian Linux, R-devel, GCC ASAN/UBSAN on rhub
-* Fedora Linux, R-devel, clang, gfortran on rhub
-* macOS 10.11 El Capitan, R-release on rhub
-* winbuilder devel
+
+* local nixos linux installation, R 4.2.1, x64
+* winbuilder devel and release
+* macOS-latest, R release on github actions
+* ubuntu-latest, R release on github actions
+* windows-latest, R release on github actions
+* ubuntu-latest, R devel, oldrel, and release on github actions
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 0 notes
 
-## Reverse dependencies
+## revdepcheck results
 
-I have checked reverse dependencies using `revdepcheck::revdep_check()`
-against polylabelrs two dependencies eulerr and HilbertCurve without
-issues.
+We checked 2 reverse dependencies (1 from CRAN + 1 from Bioconductor), comparing R CMD check results
+ across CRAN and dev versions of this package.
+
+ * We saw 0 new problems
+ * We failed to check 0 packages
