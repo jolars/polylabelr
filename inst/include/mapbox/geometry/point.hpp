@@ -21,11 +21,13 @@ struct point
     T y;
 };
 
+
 template <typename T>
 constexpr bool operator==(point<T> const& lhs, point<T> const& rhs)
 {
     return lhs.x == rhs.x && lhs.y == rhs.y;
 }
+
 
 template <typename T>
 constexpr bool operator!=(point<T> const& lhs, point<T> const& rhs)
