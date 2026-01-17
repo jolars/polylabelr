@@ -21,11 +21,11 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - {os: macos-latest,   r: 'release'}
-          - {os: windows-latest, r: 'release'}
-          - {os: ubuntu-latest,   r: 'devel', http-user-agent: 'release'}
-          - {os: ubuntu-latest,   r: 'release'}
-          - {os: ubuntu-latest,   r: 'oldrel-1'}
+          - { os: macos-latest, r: "release" }
+          - { os: windows-latest, r: "release" }
+          - { os: ubuntu-latest, r: "devel", http-user-agent: "release" }
+          - { os: ubuntu-latest, r: "release" }
+          - { os: ubuntu-latest, r: "oldrel-1" }
 
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -51,16 +51,3 @@ jobs:
         with:
           upload-snapshots: true
           build_args: 'c("--no-manual","--compact-vignettes=gs+qpdf")'
-  #
-  # release:
-  #   if: ${{ github.ref == 'refs/heads/main' }}
-  #   permissions:
-  #     contents: write
-  #     pull-requests: write
-  #   needs:
-  #     - R-CMD-check
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: googleapis/release-please-action@v4
-  #       with:
-  #         token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
