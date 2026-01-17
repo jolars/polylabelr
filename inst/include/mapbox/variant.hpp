@@ -161,7 +161,12 @@ struct enable_if_type
 template <typename F, typename V, typename Enable = void>
 struct result_of_unary_visit
 {
+    // Use std::invoke_result (C++17+) instead of std::result_of (removed in C++20)
+#if __cplusplus >= 201703L
+    using type = typename std::invoke_result<F, V&>::type;
+#else
     using type = typename std::result_of<F(V&)>::type;
+#endif
 };
 
 template <typename F, typename V>
@@ -173,7 +178,12 @@ struct result_of_unary_visit<F, V, typename enable_if_type<typename F::result_ty
 template <typename F, typename V, typename Enable = void>
 struct result_of_binary_visit
 {
+    // Use std::invoke_result (C++17+) instead of std::result_of (removed in C++20)
+#if __cplusplus >= 201703L
+    using type = typename std::invoke_result<F, V&, V&>::type;
+#else
     using type = typename std::result_of<F(V&, V&)>::type;
+#endif
 };
 
 template <typename F, typename V>
