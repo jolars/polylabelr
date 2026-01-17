@@ -2,3 +2,17 @@
 .RData
 .Rproj.user
 docs/
+
+# nix -----------------------------------------------
+
+# Ignore build outputs from performing a nix-build or `nix build` command
+result
+result-*
+
+# direnv
+.direnv/
+
+# devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml

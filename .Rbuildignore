@@ -15,3 +15,7 @@
 ^release-please-config.json$
 ^.release-please-manifest.json$
 ^CRAN-SUBMISSION$
+^flake\.nix$
+^flake\.lock$
+^\.envrc$
+^\.direnv$
