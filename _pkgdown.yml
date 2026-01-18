@@ -2,3 +2,6 @@ destination: docs
 development:
   mode: auto
 url: https://jolars.github.io/polylabelr/
+
+template:
+  bootstrap: 5
