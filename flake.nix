@@ -25,6 +25,7 @@
             autoconf
             go-task
             pandoc
+            air
             llvmPackages.openmp
             (rWrapper.override {
               packages = with rPackages; [
