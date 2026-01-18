@@ -62,3 +62,53 @@ test_that("poi works with simple features", {
   expect_equal(poi(gc, precision = 0.1), hi_res_poi, tolerance = 0.00001)
   expect_silent(poi(gc))
 })
+
+test_that("poi works with sf objects", {
+  skip_if_not_installed("sf")
+  library(sf)
+
+  p1 <- rbind(c(0, 0), c(1, 0), c(3, 2), c(2, 4), c(1, 4), c(0, 0))
+  p2 <- rbind(c(1, 1), c(1, 2), c(2, 2), c(1, 1))
+  pol <- st_polygon(list(p1, p2))
+
+  # Test with sf object (data frame with geometry column)
+  sf_obj <- st_sf(id = 1:2, geometry = st_sfc(pol, pol))
+  result <- poi(sf_obj)
+
+  expect_type(result, "list")
+  expect_length(result, 2)
+  expect_equal(result[[1]], result[[2]])
+  expect_equal(result[[1]], list(x = 1.875, y = 2.625, dist = 0.625))
+})
+
+test_that("poi works with sfc objects", {
+  skip_if_not_installed("sf")
+  library(sf)
+
+  p1 <- rbind(c(0, 0), c(1, 0), c(3, 2), c(2, 4), c(1, 4), c(0, 0))
+  p2 <- rbind(c(1, 1), c(1, 2), c(2, 2), c(1, 1))
+  pol <- st_polygon(list(p1, p2))
+
+  # Test with sfc object (geometry list-column)
+  sfc_obj <- st_sfc(pol, pol)
+  result <- poi(sfc_obj)
+
+  expect_type(result, "list")
+  expect_length(result, 2)
+  expect_equal(result[[1]], result[[2]])
+  expect_equal(result[[1]], list(x = 1.875, y = 2.625, dist = 0.625))
+})
+
+test_that("poi warns on unsupported sfg geometry types", {
+  skip_if_not_installed("sf")
+  library(sf)
+
+  # Create an unsupported geometry type
+  unsupported <- structure(c(1, 2), class = c("XY", "UNSUPPORTED", "sfg"))
+
+  expect_warning(
+    result <- poi(unsupported),
+    "poi\\(\\) does not support objects of type XY, UNSUPPORTED, sfg"
+  )
+  expect_true(is.na(result))
+})
