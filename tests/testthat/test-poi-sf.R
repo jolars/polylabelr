@@ -4,7 +4,14 @@ test_that("poi works with simple features", {
 
   # Create some test objects
   p <- st_point(c(1, 2))
-  pts <- rbind(c(3.2, 4), c(3, 4.6), c(3.8, 4.4), c(3.5, 3.8), c(3.4, 3.6), c(3.9, 4.5))
+  pts <- rbind(
+    c(3.2, 4),
+    c(3, 4.6),
+    c(3.8, 4.4),
+    c(3.5, 3.8),
+    c(3.4, 3.6),
+    c(3.9, 4.5)
+  )
   mp <- st_multipoint(pts)
   ## MULTIPOINT ((3.2 4), (3 4.6), (3.8 4.4), (3.5 3.8), (3.4 3.6), (3.9 4.5))
 
@@ -23,7 +30,9 @@ test_that("poi works with simple features", {
   # POLYGON ((0 0, 1 0, 3 2, 2 4, 1 4, 0 0), (1 1, 1 2, 2 2, 1 1))
 
   p3 <- rbind(c(3, 0), c(4, 0), c(4, 1), c(3, 1), c(3, 0))
-  p4 <- rbind(c(3.3, 0.3), c(3.8, 0.3), c(3.8, 0.8), c(3.3, 0.8), c(3.3, 0.3))[5:1, ]
+  p4 <- rbind(c(3.3, 0.3), c(3.8, 0.3), c(3.8, 0.8), c(3.3, 0.8), c(3.3, 0.3))[
+    5:1,
+  ]
   p5 <- rbind(c(3, 3), c(4, 2), c(4, 3), c(3, 3))
   mpol <- st_multipolygon(list(list(p1, p2), list(p3, p4), list(p5)))
   ## MULTIPOLYGON (((0 0, 1 0, 3 2, 2 4, 1 4, 0 0), (1 1, 1 2, 2 2, 1 1)), ((3 0, 4 0, 4 1, 3 1, 3 0), (3.3 0.3, 3.3 0.8, 3.8 0.8, 3.8 0.3, 3.3 0.3)), ((3 3, 4 2, 4 3, 3 3)))
