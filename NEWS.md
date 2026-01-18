@@ -1,5 +1,11 @@
-## [0.3.0](https://github.com/jolars/polylabelr/compare/v0.2.0...v0.3.0) (2024-11-19)
+## 1.0.0
 
+## Bug Fixes
+
+* We now condition the use of `std::result_of` on the C++ standard version 
+  since it was removed in C++20, and then replace it by `std::invoke_result`.
+
+## 0.3.0
 
 ### Features
 
