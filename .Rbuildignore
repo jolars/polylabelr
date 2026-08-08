@@ -19,3 +19,5 @@
 ^flake\.lock$
 ^\.envrc$
 ^\.direnv$
+^AGENTS\.md$
+^CLAUDE\.md$
