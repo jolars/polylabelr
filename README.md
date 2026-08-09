@@ -35,7 +35,7 @@ polypath(x, y, col = "grey", border = FALSE)
 points(p)
 ```
 
-<img src="man/figures/README-unnamed-chunk-1-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-1-1.png" alt="" width="100%" />
 
 ## Installation
 
@@ -57,6 +57,13 @@ The source code from
 [geometry.hpp](https://github.com/mapbox/geometry.hpp/) has been
 modified slightly by removing the use of some GCC diagnostic pragmas
 that caused warnings in R CMD check.
+
+Mapbox removed the C++ implementation of polylabel from their
+repository, so the algorithm is now a C++ port of their [JavaScript
+implementation](https://github.com/mapbox/polylabel/blob/master/polylabel.js).
+The one intentional difference is that polygons smaller than the
+requested precision are still searched properly rather than
+short-circuited to a corner of their bounding box.
 
 ## Versioning
 

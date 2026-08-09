@@ -59,6 +59,22 @@ The R layer is S3 dispatch on `poi()`:
 - `geometry.hpp` had GCC diagnostic pragmas removed because they tripped `R CMD check`.
 - `variant.hpp` conditions `std::result_of` on the C++ standard version, falling back to
   `std::invoke_result` for C++20 where `std::result_of` was removed.
+- `polylabel.hpp` is **no longer vendored upstream code**. Mapbox deleted its C++
+  implementation in [#124](https://github.com/mapbox/polylabel/pull/124), so the header is a
+  local C++ port of upstream's `polylabel.js`, tracked against
+  <https://github.com/mapbox/polylabel/blob/master/polylabel.js>. It is kept structurally
+  close to the JavaScript (same function names, same comments) so future upstream changes can
+  be transliterated. Upstream's own test expectations are reproduced bit for bit.
+  - It deliberately diverges in one place: upstream short-circuits any polygon whose smaller
+    bounding-box dimension is `<= precision` and returns a bounding-box corner, whereas we
+    only short-circuit genuinely degenerate polygons. See the `NOTE` in
+    `polylabelWithDistance()`.
+  - `polylabelWithDistance()` returns the center and its distance together, since the search
+    already knows the distance; `polylabel()` remains available and returns just the point.
+  - `tests/testthat/test-upstream.R` mirrors upstream's whole test suite and must keep
+    passing. Its `water.rds` fixture is upstream's `test/fixtures/water1.json` and
+    `water2.json`, each read into a list of two-column ring matrices and saved with
+    `saveRDS(..., version = 2, compress = "xz")`.
 
 License attribution for each vendored file lives in `inst/COPYRIGHTS`; update it if the set
 of vendored files changes.

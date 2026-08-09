@@ -1,3 +1,20 @@
+# polylabelr 1.1.0
+
+## Features
+
+- The algorithm has been updated to match 'polylabel' 2.1.0, which makes `poi()`
+  roughly 25 to 35 times faster on large polygons. The search now flattens the
+  polygon into a single coordinate buffer, skips whole blocks of edges via
+  precomputed bounding boxes, seeds each cell with its parent's nearest segment,
+  and stops measuring as soon as a cell cannot beat the best candidate.
+
+## Bug Fixes
+
+- `poi()` no longer returns a point outside of the polygon when the precision is
+  too coarse for the search to refine its first guess. Polygons whose centroid
+  falls outside of them, such as crescents, could previously return a point far
+  outside the polygon, with a negative distance.
+
 # polylabelr 1.0.0
 
 ## Bug Fixes

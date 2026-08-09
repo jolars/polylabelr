@@ -24,6 +24,7 @@ SOFTWARE.
 --------------------------------------------------------------------------------
 
 Files: inst/include/mapbox/polylabel.hpp
+       tests/testthat/water.rds
 
 ISC License
 Copyright (c) 2016 Mapbox
