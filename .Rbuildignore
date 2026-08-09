@@ -19,5 +19,11 @@
 ^flake\.lock$
 ^\.envrc$
 ^\.direnv$
+^\.devenv$
+^devenv\.nix$
+^devenv\.lock$
+^devenv\.yaml$
+^devenv\.local\.nix$
+^devenv\.local\.yaml$
 ^AGENTS\.md$
 ^CLAUDE\.md$
