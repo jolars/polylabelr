@@ -20,7 +20,7 @@ Rscript -e 'devtools::test(filter = "poi-sf")'         # run one test file (test
 Rscript -e 'devtools::document()'                      # regenerate NAMESPACE and man/ from roxygen
 Rscript -e 'Rcpp::compileAttributes()'                 # regenerate RcppExports after editing src/poi.cpp
 Rscript -e 'devtools::check()'                         # full R CMD check
-Rscript -e 'knitr::knit("README.Rmd", "README.md")'    # README.md is generated; edit README.Rmd only
+Rscript -e 'devtools::build_readme()'                  # README.md is generated; edit README.Rmd only
 ```
 
 Generated files that must never be hand-edited: `NAMESPACE`, `man/*.Rd`,
@@ -57,7 +57,7 @@ The R layer is S3 dispatch on `poi()`:
 **locally patched** and should not be refreshed from upstream wholesale:
 
 - `geometry.hpp` had GCC diagnostic pragmas removed because they tripped `R CMD check`.
-- `polylabel.hpp` conditions `std::result_of` on the C++ standard version, falling back to
+- `variant.hpp` conditions `std::result_of` on the C++ standard version, falling back to
   `std::invoke_result` for C++20 where `std::result_of` was removed.
 
 License attribution for each vendored file lives in `inst/COPYRIGHTS`; update it if the set
